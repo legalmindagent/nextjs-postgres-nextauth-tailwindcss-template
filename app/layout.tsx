@@ -1,22 +1,16 @@
 import './globals.css';
-
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
-  title: 'Next.js App Router + NextAuth + Tailwind CSS',
-  description:
-    'A user admin dashboard configured with Next.js, Postgres, NextAuth, Tailwind CSS, TypeScript, and Prettier.'
+    title: 'VoiceAgent AI - Command Center',
+    description: 'AI-powered voice receptionist dashboard for small businesses.'
 };
 
-export default function RootLayout({
-  children
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body className="flex min-h-screen w-full flex-col">{children}</body>
-      <Analytics />
-    </html>
-  );
-}
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+    return (
+          <html lang="en" className="dark">
+                <body className="flex min-h-screen w-full flex-col bg-[#111111]">{children}</body>body>
+                <Analytics />
+          </html>html>
+        );
+}</html>
