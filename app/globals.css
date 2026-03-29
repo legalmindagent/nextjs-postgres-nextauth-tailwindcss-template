@@ -44,3 +44,35 @@
 input[type='search']::-webkit-search-cancel-button { -webkit-appearance: none; }
 input[type='search']::-moz-search-cancel-button { display: none; }
 input[type='search']::-ms-clear { display: none; }
+
+/* ── JARVIS Agent styles ────────────────────────────────────────────────── */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(56,189,248,0.4), 0 0 60px rgba(56,189,248,0.2); }
+  50%       { box-shadow: 0 0 40px rgba(56,189,248,0.8), 0 0 100px rgba(56,189,248,0.4); }
+}
+
+@keyframes scan-line {
+  0%   { top: 0%; opacity: 0.8; }
+  50%  { opacity: 0.4; }
+  100% { top: 100%; opacity: 0.8; }
+}
+
+@keyframes hud-fade-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.agent-glow      { animation: glow-pulse 3s ease-in-out infinite; }
+.agent-float     { animation: float 4s ease-in-out infinite; }
+.agent-spin-slow { animation: spin-slow 20s linear infinite; }
+.agent-hud-in    { animation: hud-fade-in 0.4s ease-out both; }
